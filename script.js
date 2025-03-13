@@ -76,4 +76,28 @@ function isValidDate(strDate){
     return result
 };
 
+/* Étape 2
+Créer une fonction isPalindrome qui prend une date en string en paramètre et retourne un booléen qui indique si la date est un palindrome. 
+Si la date est invalide, retourner false.
+Exemple de date palindrome: 11/02/2011. Les caractères / ne sont pas pris en compte.
+isPalindrome("11/02/2011") // true isPalindrome("03/04/2001") // false */
+
+function isPalindrome(strDate){
+    let result;
+    if (strDate[0] === strDate[9] &&
+        strDate[1] === strDate[8] &&
+        strDate[3] === strDate[7] &&
+        strDate[4] === strDate[6]) {
+            result = true
+        } else {
+            result = false
+        }
+    //console.log ( "la date est un palindrome : "+ result)
+    return result
+}
+
+isPalindrome("12/02/2021");
+isPalindrome("31/12/1986");
+isPalindrome("11/11/1111");
+
 
