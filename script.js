@@ -1,17 +1,3 @@
-/* NOTES POUR APRES 
-let today = new Date()
-console.log(today)
-let actualYear  = today.getFullYear()
-console.log(actualYear)
-
-Palindrome = AB/CD/DCBA
-const VALUESA = [ "0", "1", "2", "3"];
-const VALUESB = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const VALUESC = [ "0", "1"];
-const VALUESD = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]; */
-
-
-
 /* Étape 1
 Créer une fonction isValidDate qui prend en paramètre une date en string et determine si elle est valide.
 Pour qu'une date soit valide, il faut qu'elle existe et qu'elle soit au format dd/mm/aaaa.
