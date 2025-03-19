@@ -87,3 +87,23 @@ isPalindrome("31/12/1986");
 isPalindrome("11/11/1111");
 
 
+//Je crée un array avec toutes les dates en palindromes, entre 1000 et 9999, classées par ordre chronologique
+
+let allPalDates = [];
+for (let d of DAYS){
+    for (let m of MONTHS){
+        let palindromeDate = {
+        day: d,
+        month: m,
+        year: (d+m).split("").reverse().join("")
+        }
+        allPalDates.push(palindromeDate);
+        allPalDates.sort((a, b) => a.year - b.year);
+    }
+}
+
+console.log(allPalDates);
+
+
+
+
