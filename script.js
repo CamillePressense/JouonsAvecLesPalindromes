@@ -27,8 +27,6 @@ function maxDaysInMonth(day, month){
     }
 }
 
-
-
 function isValidDate(strDate){
     let result;
     let dayOfStrDate = strDate[0] + strDate[1];
@@ -86,6 +84,10 @@ isPalindrome("12/02/2021");
 isPalindrome("31/12/1986");
 isPalindrome("11/11/1111");
 
+/* Étape 3
+Créer une fonction getNextPalindromes qui donne les x prochaines dates palindromes à compter d’aujourd’hui. 
+La fonction prendra le x en paramètre. */
+
 
 //Je crée un array avec toutes les dates en palindromes, entre 1000 et 9999, classées par ordre chronologique
 
@@ -102,7 +104,29 @@ for (let d of DAYS){
     }
 }
 
-console.log(allPalDates);
+
+function getNextPalindromes(x){
+    const ACTUALYEAR = new Date().getFullYear();
+    const ACTUALMONTH = new Date().getMonth() + 1;
+    const ACTUALDAY = new Date().getDate();
+    
+    let nextPalindromes = [];
+
+    allPalDates.forEach(date => {
+        if ((date.year > ACTUALYEAR) || 
+        ((date.year === ACTUALYEAR) && (date.month >= ACTUALMONTH) && (date.day > ACTUALDAY))){
+            if (nextPalindromes.length < x){
+                nextPalindromes.push(date);
+            } else {
+            return nextPalindromes;
+            }
+        }
+    })
+    console.log(nextPalindromes);
+}
+
+getNextPalindromes(10)
+
 
 
 
